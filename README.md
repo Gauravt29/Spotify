@@ -198,8 +198,9 @@ WHERE
 ```
 
 ### Advanced Level
+
 1. **Find the top 3 most-viewed tracks for each artist using window functions.**
-   ```sql
+ ```sql
 WITH ranking_artist
 as
 (SELECT
@@ -213,7 +214,8 @@ order by 1, 3 DESC
 )
 select * from ranking_artist
 where rank <= 3
-   ```
+
+ ```
 
 2. **Write a query to find tracks where the liveness score is above the average.**
    ```sql
