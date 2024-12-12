@@ -195,7 +195,6 @@ FROM (
 WHERE 
     streamed_on_spotify > streamed_on_youtube
     AND streamed_on_youtube <> 0;
-
 ```
 
 ### Advanced Level
@@ -214,19 +213,18 @@ order by 1, 3 DESC
 )
 select * from ranking_artist
 where rank <= 3
-
    ```
+
 2. **Write a query to find tracks where the liveness score is above the average.**
    ```sql
-
 select 
 track,
 artist,
 liveness
 from  spotify
 WHERE liveness >(SELECT AVG(liveness) from spotify)
-
    ```
+
 3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
 ```sql
 WITH cte
